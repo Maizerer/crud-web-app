@@ -10,10 +10,10 @@ namespace LR3_ISRPO2
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            // устанавливаем контекст данных
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             services.AddDbContext<GoodsContext>(options =>
            options.UseSqlServer(SqlConnectionIntegratedSecurity));
-            services.AddControllers(); // используем контроллеры без представлений
+            services.AddControllers(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         }
         public static string SqlConnectionIntegratedSecurity
         {
@@ -21,10 +21,10 @@ namespace LR3_ISRPO2
             {
                 var sb = new SqlConnectionStringBuilder
                 {
-                    DataSource = "localhost",
-                    // Подключение будет с проверкой подлинности пользователя Windows
+                    DataSource = "DESKTOP-ON4LKTV\\SQLEXPRESS",
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Windows
                     IntegratedSecurity = true,
-                    // Название целевой базы данных.
+                    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
                     InitialCatalog = "sport_pit"
                 };
                 return sb.ConnectionString;
@@ -39,7 +39,7 @@ namespace LR3_ISRPO2
             app.UseStaticFiles();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers(); // подключаем маршрутизацию на контроллеры
+                endpoints.MapControllers(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             });
         }
     }
